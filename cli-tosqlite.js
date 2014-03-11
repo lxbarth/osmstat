@@ -26,6 +26,7 @@ var store = function(type, db) {
         }
         var day = new Date(elem.timestamp * 1000).toISOString().substring(0, 10);
         var timestampday = new Date(day).getTime() / 1000;
+        // Uses way too much mem. Why?
         db.run("INSERT INTO edits VALUES (?, ?, ?)", elem.timestamp, timestampday, elem.uid);
         // var stmt = db.prepare("INSERT INTO edits VALUES (?, ?, ?)", function() {
         //     stmt.run(elem.timestamp, timestampday, elem.uid, function() {
