@@ -1,0 +1,20 @@
+{
+  "name": "osmstats",
+  "version": "0.0.1",
+  "author": "Alex Barth <alex@mapbox.com>",
+  "description": "Analyze user activity from OSM history dump",
+  "scripts": {
+      "import": "node cli-import.js",
+      "start": "node cli-stats.js"
+  },
+  "main": "download.js",
+  "dependencies" : {
+    "underscore": "1.6.0",
+    "osmium": "0.1.1",
+    "sqlite3": "2.2.0"
+  },
+  "license": "BSD",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
